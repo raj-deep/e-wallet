@@ -7,6 +7,21 @@
     <artifactId>epay</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+    </dependencies>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

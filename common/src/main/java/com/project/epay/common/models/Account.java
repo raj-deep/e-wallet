@@ -1,4 +1,4 @@
-package com.project.epay.useraccounts.model;
+package com.project.epay.common.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -32,5 +32,10 @@ public class Account {
 
     @Builder.Default
     private boolean kycCompleted = false;
+
+    public void send(Account receiverAccount, double amount){
+        this.balance -= amount;
+        receiverAccount.balance += amount;
+    }
 
 }

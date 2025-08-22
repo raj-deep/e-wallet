@@ -1,4 +1,4 @@
-package com.project.epay.useraccounts.model;
+package com.project.epay.common.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

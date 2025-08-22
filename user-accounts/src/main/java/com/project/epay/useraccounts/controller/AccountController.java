@@ -1,6 +1,6 @@
 package com.project.epay.useraccounts.controller;
 
-import com.project.epay.useraccounts.model.Account;
+import com.project.epay.common.models.Account;
 import com.project.epay.useraccounts.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

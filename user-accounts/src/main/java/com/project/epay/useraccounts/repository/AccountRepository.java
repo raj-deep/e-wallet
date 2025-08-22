@@ -1,6 +1,6 @@
 package com.project.epay.useraccounts.repository;
 
-import com.project.epay.useraccounts.model.Account;
+import com.project.epay.common.models.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

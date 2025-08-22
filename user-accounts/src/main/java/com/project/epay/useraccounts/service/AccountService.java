@@ -1,12 +1,14 @@
 package com.project.epay.useraccounts.service;
 
-import com.project.epay.useraccounts.model.Account;
-import com.project.epay.useraccounts.model.User;
+import com.project.epay.common.models.Transaction;
+import com.project.epay.common.models.Account;
+import com.project.epay.common.models.User;
 import com.project.epay.useraccounts.repository.AccountRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -42,5 +44,12 @@ public class AccountService {
     public Account getAccountByUser(UUID userId){
         Optional<Account> account = this.accountRepository.findByUserId(userId);
         return account.orElseThrow(() -> new RuntimeException("Account not found"));
+    }
+
+    public void sendMoney(Transaction transaction){
+        Account sender = transaction.getSenderAccount();
+        Account receiver = transaction.getReceiverAccount();
+        sender.send(receiver, transaction.getAmount());
+        this.accountRepository.saveAll(List.of(sender, receiver));
     }
 }

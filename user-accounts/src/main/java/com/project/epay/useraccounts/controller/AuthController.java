@@ -1,8 +1,7 @@
 package com.project.epay.useraccounts.controller;
 
 import com.project.epay.useraccounts.dto.AuthDto;
-import com.project.epay.useraccounts.dto.AuthResponse;
-import com.project.epay.useraccounts.model.User;
+import com.project.epay.common.models.User;
 import com.project.epay.useraccounts.service.UserService;
 //import com.project.epay.useraccounts.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Collections;
 
 @RestController
 @RequestMapping("/auth/")
