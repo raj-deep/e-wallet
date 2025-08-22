@@ -1,0 +1,15 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: "user-accounts"
+  jpa:
+    hibernate:
+      ddl-auto: "update"
+
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/epay"
+    username: "postgres"
+    password: "Shalimar@123"
+    driver-class-name: "org.postgresql.Driver"
